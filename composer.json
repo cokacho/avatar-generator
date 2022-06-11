@@ -2,6 +2,9 @@
     "name": "cokacho/example_01",
     "type": "composer-plugin",
     "require": {
+        "ext-curl": "*",
+        "guzzlehttp/guzzle": "^7.4",
+        "vlucas/phpdotenv": "^5.4",
         "oscarotero/env": "^2.1"
     },
     "autoload": {

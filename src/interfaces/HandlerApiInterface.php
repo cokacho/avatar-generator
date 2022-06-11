@@ -2,7 +2,7 @@
 
 namespace Harmons\interfaces;
 
-interface AvatarInterface
+interface HandlerApiInterface
 {
     /**
      * @return mixed
@@ -10,8 +10,8 @@ interface AvatarInterface
     public function init();
 
     /**
+     * @param string $apiUrl
      * @return mixed
      */
-    public function getAvatarContent();
-
+    public function setUrl(string $apiUrl);
 }

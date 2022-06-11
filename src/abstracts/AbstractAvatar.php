@@ -2,46 +2,41 @@
 
 namespace Harmons\abstracts;
 
-use Harmons\interfaces\AvatarApiInterface;
-use Harmons\interfaces\AvatarConfigurationInterface;
 use Harmons\interfaces\AvatarInterface;
+use Harmons\interfaces\HandlerApiInterface;
 
 abstract class AbstractAvatar implements AvatarInterface
 {
-    public AvatarApiInterface $handler;
+    /**
+     * @var HandlerApiInterface
+     */
+    public HandlerApiInterface $handler;
 
-    public AvatarConfigurationInterface $configuration;
+    /**
+     * @var array
+     */
+    public array $configuration;
 
-    abstract public function init();
-
-    public function load(AvatarApiInterface $handler, AvatarConfigurationInterface $configuration)
-    {
-        $this->setHandler($handler);
-        $this->setConfiguration($configuration);
-
-    }
-
-    public function setHandler(AvatarApiInterface $handler)
+    /**
+     * @param HandlerApiInterface $handler
+     * @return void
+     */
+    public function setHandler(HandlerApiInterface $handler)
     {
         $this->handler = $handler;
     }
 
-    public function getHandler(): AvatarApiInterface
+    /**
+     * @return mixed|void
+     */
+    public function init()
     {
-        return $this->handler;
+
     }
 
-    public function setConfiguration(AvatarConfigurationInterface $configuration)
-    {
-        $this->configuration = $configuration;
-    }
-
-    public function getConfiguration(): AvatarConfigurationInterface
-    {
-        return $this->configuration;
-    }
-
-
+    /**
+     * @return mixed|void
+     */
     public function getAvatarContent()
     {
         // TODO: Implement getAvatarContent() method.
