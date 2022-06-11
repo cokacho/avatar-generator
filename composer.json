@@ -1,0 +1,21 @@
+{
+    "name": "cokacho/example_01",
+    "type": "composer-plugin",
+    "require": {
+        "oscarotero/env": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Harmons\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nelson F Escudero",
+            "email": "nel.esc.cas@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6"
+    }
+}
